@@ -1,0 +1,133 @@
+.body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Nav section */
+.flex-nav{
+  display: flex;
+  margin: 1vw 4vw;
+  margin-top: 2vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-nav > img{
+  height: 50px;
+}
+
+.navigation {
+  margin: 0px;
+  padding: 0px;
+  width: 45vw;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#about {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: black;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Nav section End */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 240px 240px;
+  margin: 0vw 4vw;
+  padding: 0;
+  height: 67vh;
+  gap: 5px;
+}
+
+/* Picture */
+.about-picture {
+  grid-row: span 2;
+}
+.about-picture > img {
+  border-radius: 5%;
+}
+/*Picture End*/
+
+/* About Description */
+.article-about {
+  grid-column: span 2;
+}
+.article-about > header {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-top: 12px;
+}
+p.description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+/*About Description End*/
+
+
+.tab-container {
+  grid-column: span 2;
+}
+
+.tab-titles {
+  display: flex;
+}
+
+.tab-links {
+  margin-right: 50px;
+  margin-top: 0;
+  font-size: 18px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  /*tambahan*/height: fit-content;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+  
+}
+
+.tab-contents ul li span {
+  color: #ff004f;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
