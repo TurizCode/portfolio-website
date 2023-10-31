@@ -1,0 +1,175 @@
+.body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Nav section */
+.flex-nav{
+  display: flex;
+  margin: 1vw 4vw;
+  margin-top: 2vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-nav > img{
+  height: 50px;
+}
+
+.navigation {
+  margin: 0px;
+  padding: 0px;
+  width: 45vw;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#home {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: black;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Nav section End*/
+
+.flex-main-content {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 20px;
+  height: 80vh;
+}
+
+.profile-picture > img {
+  width: 400px;
+  border-radius: 50%;
+}
+
+/* article detail */
+.details {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.details * {
+  padding: 0;
+  margin: 0;
+}
+
+p.greetings {
+  font-family: 'Inclusive Sans', sans-serif;
+  font-weight: bolder;
+  color: rgb(100, 100, 100);
+  font-size: 1.2rem ;
+}
+
+h1.name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+}
+
+h1.name:hover {
+  background-color: black;
+  color: white;
+}
+
+span.turiz:hover {
+  color: greenyellow;
+}
+
+p.job {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: rgb(105, 105, 105);
+}
+
+/* button */
+.btn-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-cv,
+.btn-contact {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-cv:hover,
+.btn-contact:hover {
+  cursor: pointer;
+}
+
+.btn-cv,
+.btn-contact:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-container > .btn-cv > a {
+  color: white;
+}
+
+.btn-cv:hover{
+  color: black;
+  background: white;
+}
+
+.btn-container > .btn-cv:hover > a {
+  color: black;
+}
+
+.btn-contact:hover {
+  border: black 0.1rem solid;
+}
+
+.btn-container > .btn-contact:hover > a {
+  color: white;
+}
+
+.btn-container > .btn > a {
+  text-decoration: none;
+}
+/* button end*/
+
+.icon-link {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
