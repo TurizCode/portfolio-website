@@ -362,6 +362,10 @@ p.job {
   transition: 0.5s ease;
 }
 
+.tab-links.active-link {
+  font-weight: 700;
+}
+
 .tab-links.active-link::after {
   width: 50%;
 }
@@ -377,7 +381,7 @@ p.job {
 }
 
 .tab-details ul li span {
-  color: rgb(105, 105, 105);
+  color: black;
   font-weight: 700;
   font-size: 0.875rem;
 }
