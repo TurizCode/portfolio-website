@@ -5,85 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Turiz Code</title>
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Nunito+Sans:opsz,wght@6..12,300;6..12,600&family=Poppins:wght@200;300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/style/mediaqueries.css" />
+    <script defer src="./js/script.js"></script>
   </head>
   <body>
-    <!-- Navigation Section Start -->
-    <nav class="flex-nav">
-      <!--Logo Start-->
-      <div class="logo-nav">
-        <img
-          src="./assets/logo.png"
-          alt="Turiz Personal Logo"
-          draggable="false"
-        />
-      </div>
-      <!--Logo End-->
+    <!-- # NAVBAR -->
+    <nav class="nav-bar">
+      <!-- ## logo navbar -->
+      <img
+        class="nav-logo"
+        src="./assets/logo.png"
+        alt="Turiz Personal Logo"
+        draggable="false"
+      />
 
+      <!-- ## navigating link -->
       <div>
-        <ul class="navigation">
-          <li id="home"><a href="index.html">Home</a></li>
-          <li id="about"><a href="./src/about.html">About</a></li>
-          <li id="projects"><a href="#Projects">Projects</a></li>
-          <li id="contact"><a href="#Contact">Contact</a></li>
+        <ul class="nav-links">
+          <li class="nav-home">
+            <a href="#home">Home</a>
+          </li>
+          <li class="nav-about">
+            <a href="#about">About</a>
+          </li>
+          <li class="nav-projects">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="nav-contact">
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
-    <!-- Navigation Section End -->
 
-    <!-- Main Section Start -->
-    <main class="flex-main-content">
-      <!--Profile Photo Start-->
-      <section class="profile-picture">
+    <!-- ## hamburger nav -->
+    <nav class="hamburger-nav">
+      <img
+        class="hamburger-logo"
+        src="./assets/logo.png"
+        alt="Turiz Code Logo"
+      />
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hamburger-links">
+          <li class="nav-home">
+            <a href="#home" onclick="toggleMenu()">Home</a>
+          </li>
+          <li class="nav-about">
+            <a href="#about" onclick="toggleMenu()">About</a>
+          </li>
+          <li class="nav-projects">
+            <a href="#projects" onclick="toggleMenu()">Projects</a>
+          </li>
+          <li class="nav-contact">
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- # MAIN SECTION -->
+    <main class="main-content">
+      <!-- ## home -->
+      <section id="home">
+        <!-- ### profile-picture -->
         <img
-          src="./assets/profile-picture.png"
+          class="profile-picture"
+          src="./assets/profile-photo.png"
           alt="Rizki's Profile Picture"
           draggable="false"
         />
+
+        <!-- ### profile-details -->
+        <article class="profile-details">
+          <p class="greetings">Hello, I'm</p>
+          <h1 class="name">Pu<span class="turiz">tu Riz</span>ki</h1>
+          <p class="job">Full Stack Developer</p>
+
+          <!-- #### profile's button -->
+          <div class="btn-container">
+            <button class="btn btn-cv">
+              <a href="./documents/CV - Putu Rizki Eka Wibawa.pdf"
+                >Download CV</a
+              >
+            </button>
+            <button class="btn btn-contact">
+              <a href="#contact">Contact Info</a>
+            </button>
+          </div>
+
+          <!-- #### profile's icon -->
+          <div class="icon-link">
+            <a href="https://linkedin.com/in/putu-rizki/">
+              <img src="./assets/linkedin.png" alt="Linkedin Logo" />
+            </a>
+            <a href="https://github.com/TurizCode">
+              <img src="./assets/github.png" alt="Github Logo" />
+            </a>
+          </div>
+        </article>
       </section>
-      <!--Profile Photo End-->
 
-      <!--Text Detail Start-->
-      <article class="details">
-        <p class="greetings">Hello, I'm</p>
-        <h1 class="name">Pu<span class="turiz">tu Riz</span>ki</h1>
-        <p class="job">Full Stack Developer</p>
-        <!--Text Detail End-->
-
-        <!--Button Start-->
-        <div class="btn-container">
-          <button class="btn btn-cv">
-            <a href="./assets/CV - Putu Rizki Eka Wibawa.pdf">Download CV</a>
-          </button>
-          <button class="btn btn-contact">
-            <a href="./contact.html">Contact Info</a>
-          </button>
+      <!-- ## about -->
+      <section id="about">
+        <div class="about-col-1">
+          <img src="./assets/about-picture.jpg" alt="" />
         </div>
-        <!--Button End-->
+        <article class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            Making a career pivot from Entertain and Tourism field into a Tech
+            Industry.
+            <br />Currently learning Full Stack Development in bootcamp at
+            Harisenin.com and Udemy.com. <br />Doing module-related projects and
+            actively looking insight from experts, <br />whether Back-End or
+            Front-End, in hope to became a worthy candidate later on.
+          </p>
 
-        <!--Icon Start-->
-        <div class="icon-link">
-          <a href="linkedin.com/in/putu-rizki-840b34215/"
-            ><img
-              src="./assets/linkedin.png"
-              alt="Linkedin Logo"
-              style="width: 35px"
-          /></a>
-          <a href="https://github.com/TurizCode"
-            ><img
-              src="./assets/github.png"
-              alt="Github Logo"
-              style="width: 35px"
-          /></a>
-        </div>
-        <!--Icon End-->
-      </article>
-      <!--Main Section End-->
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="openTab('skills')">
+              Skills
+            </p>
+            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+            <p class="tab-links" onclick="openTab('education')">Education</p>
+          </div>
+          <div class="tab-details active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
+              <li><span>Web Development</span><br />Web app Development</li>
+              <li>
+                <span>App Development</span><br />Building Android/iOS apps
+              </li>
+            </ul>
+          </div>
+          <div class="tab-details" id="experience">
+            <ul>
+              <li><span>2019</span><br />Designing Web/App Interfaces</li>
+              <li><span>2022</span><br />Web app Development</li>
+              <li><span>2023-now</span><br />Building Android/iOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-details" id="education">
+            <ul>
+              <li>
+                <span>harisenin.com</span><br />Designing Web/App Interfaces
+              </li>
+              <li><span>udemy.com</span><br />Web app Development</li>
+              <li><span>self taught</span><br />Building Android/iOS apps</li>
+            </ul>
+          </div>
+        </article>
+      </section>
     </main>
   </body>
 </html>
