@@ -5,4 +5,44 @@
     .hamburger-nav {
         display: flex;
     }
+    .hamburger-logo {
+        margin-left: 2vw;
+    }
+    .hamburger-menu {
+        margin-right: 4vw;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    #home {
+        flex-direction: column;
+        gap: 7vw;
+    }
+    .profile-picture {
+        width: 50vw;
+    }
+    #about {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .profile-picture {
+        width: 70vw;
+    }
+    .tab-links {
+        margin-right: 35px;
+    }
+    .tab-links:last-child{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .tab-links {
+        margin-right: 25px;
+        width:fit-content;
+    }
 }

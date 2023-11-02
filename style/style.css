@@ -4,9 +4,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.body {
-  margin: 0px;
-  padding: 0px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /* # NAVBAR SECTION */
@@ -19,10 +19,10 @@ nav {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.945);
+  background-color: rgba(255, 255, 255, 0.925);
 }
 
-img.nav-logo {
+.nav-logo {
   height: 8vh;
   margin-left: 4vw;
 }
@@ -90,11 +90,12 @@ img.nav-logo {
 
 .hamburger-links {
   position: absolute;
-  top: 100%;
+  top: 140%;
   right: 0;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.925);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -155,7 +156,6 @@ img.nav-logo {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 100%;
   height: 100vh;
 }
 
@@ -349,6 +349,14 @@ p.job {
   cursor: pointer;
   position: relative;
   user-select: none;
+}
+
+.tab-links:hover {
+  color: grey;
+}
+
+.tab-links.active-link:hover {
+  color: black;
 }
 
 .tab-links::after {
