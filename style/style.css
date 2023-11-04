@@ -46,10 +46,11 @@ nav {
   user-select: none;
 }
 
-.nav-links > li > a:active {
+div ul li a.active-nav {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: black;
+  transition: all 0.1s ease;
 }
 
 .nav-links > li > a:hover {
@@ -57,7 +58,6 @@ nav {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
-  transition: 0.3s ease;
 }
 
 /* # HAMBURGER NAV */
@@ -167,7 +167,7 @@ nav {
 }
 
 .profile-picture:hover {
-  background-color: rgb(181, 255, 70);
+  background-color: rgb(171, 255, 46);
   transition: 0.4s ease-in;
 }
 
@@ -201,17 +201,23 @@ p.greetings {
 h1.name {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  font-weight: 600  ;
+  font-weight: 600;
+  transition: 0.5s ease;
 }
 
-h1.name::selection {
+h1.name:hover {
   background-color: black;
   color: white;
+  transition: 0.5s ease;
 }
 
-span.turiz::selection {
+.turiz {
+  transition: 0.3s ease;
+}
+
+span.turiz:hover {
   color: greenyellow;
-  background-color: black;
+  transition: 0.3s ease;
 }
 
 p.job {
@@ -240,6 +246,10 @@ p.job {
 .btn-container > .btn > a {
   text-decoration: none;
   color: black;
+}
+
+.btn-contact {
+  background-color: white;
 }
 
 .btn-cv,
