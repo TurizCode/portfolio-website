@@ -24,6 +24,7 @@ function openTab(tabName) {
 // NAVBAR: ACTIVE LINK ON SCROLL
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('ul li a');
+let hamLinks = document.querySelectorAll('.hamburger-menu li a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -37,21 +38,6 @@ window.onscroll = () => {
                 links.classList.remove('active-nav');
                 document.querySelector('ul li a[href*=' + id + ']').classList.add('active-nav');
             });
-        };
-    });
-};
-
-let secs = document.querySelectorAll('section');
-let hamLinks = document.querySelectorAll('.hamburger-menu li a');
-
-window.onscroll = () => {
-    secs.forEach(section => {
-        let top = window.scrollY;
-        let offset = section.offsetTop - 100;
-        let height = section.offsetHeight;
-        let id = section.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
             hamLinks.forEach(link => {
                 link.classList.remove('active-link');
                 document.querySelector('.hamburger-menu li a[href*=' + id + ']').classList.add('active-link');
