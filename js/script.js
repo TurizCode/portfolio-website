@@ -40,3 +40,22 @@ window.onscroll = () => {
         };
     });
 };
+
+let secs = document.querySelectorAll('section');
+let hamLinks = document.querySelectorAll('.hamburger-menu li a');
+
+window.onscroll = () => {
+    secs.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 100;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if(top >= offset && top < offset + height) {
+            hamLinks.forEach(link => {
+                link.classList.remove('active-link');
+                document.querySelector('.hamburger-menu li a[href*=' + id + ']').classList.add('active-link');
+            });
+        };
+    });
+};
