@@ -1,7 +1,9 @@
 @media screen and (max-width: 1200px) {
+    /* # NAVBAR SECTION */
     .nav-bar {
         display: none;
     }
+    /* # HAMBURGER NAV */
     .hamburger-nav {
         display: flex;
     }
@@ -13,7 +15,23 @@
     }
 }
 
+@media screen and (max-width: 1025px) {
+    /* ### first container */
+    .about-col-1 {
+        flex-basis: 35%;
+    }
+    /* ### second conatiner */
+    .about-col-2 {
+        flex-basis: 50%;
+    }
+    /* ##### tab-details - id:skills */
+    .skill-container {
+        height: 20vh;
+    }
+}
+
 @media screen and (max-width: 769px) {
+    /* ## home */
     #home {
         flex-direction: column;
         gap: 7vw;
@@ -21,26 +39,71 @@
     .profile-picture {
         width: 50vw;
     }
+    /* ## about */
     #about {
         flex-direction: column;
         flex-wrap: nowrap;
         height: fit-content;
     }
+    /* ##### tab-details - id:skills */
+    .skill-container {
+        width: 85vw;
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-width: 456px) {
+    /* #### titles: About Me */
+    .sub-title {
+        font-size: 4rem;
+    }
+    /* #### descriptions */
+    .about-col-2 p {
+        font-size: 1.5rem;
+    }
+    /* #### tab details: content according to tittles */
+    .tab-details ul li span {
+        color: black;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .tab-details ul li {
+        font-size: 1.2rem;
+    }
+    /* ##### tab-details - id:skills */
+    .header-skills {
+        font-size: 1.5rem;
+    }
+    .flex-container > div {
+        font-size: 1rem;
+    }
+    .skill-container {
+        width: 90vw;
+        height: 32vh;
+    }
 }
 
 @media screen and (max-width: 456px) {
+    /* ## home - profile picture */
     .profile-picture {
         width: 70vw;
     }
+    /* #### tab titles with links */
     .tab-links {
         margin-right: 35px;
     }
     .tab-links:last-child{
         margin-right: 0;
     }
+    /* ##### tab-details - id:skills */
+    .skill-container {
+        width: 90vw;
+        height: 40vh;
+    }
 }
 
 @media screen and (max-width: 321px) {
+    /* #### tab titles with links */
     .tab-links {
         margin-right: 25px;
         width:fit-content;

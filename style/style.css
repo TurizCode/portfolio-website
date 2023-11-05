@@ -19,7 +19,8 @@ nav {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.925);
+  background-color: rgba(255, 255, 255, 0.703); /* code beside can be deleted after */
+  /* background-color: rgba(255, 255, 255, 0.925);  */
 }
 
 .nav-logo {
@@ -149,6 +150,8 @@ div ul li a.active-nav {
 }
 
 /* # MAIN SECTION */
+
+/* ------------------------ */
 /* ## home */
 #home {
   display: flex;
@@ -309,6 +312,7 @@ p.job {
   transition: 0.3s ease;
 }
 
+/* ------------------------ */
 /* ## about */
 #about {
   padding: 0 20px;
@@ -320,37 +324,43 @@ p.job {
   height: 80vh;
 }
 
+/* ### first container */
 .about-col-1 {
   flex-basis: 25%;
 }
-
+/* #### about's picture */
 .about-col-1 img {
   width: 100%;
   border-radius: 15px;
 }
 
+/* ### second conatiner */
 .about-col-2 {
   flex-basis: 70%;
 }
 
+/* #### titles: About Me */
+.sub-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1rem 0 0;
+  font-family: 'Poppins', sans-serif;
+}
+/* #### descriptions */
 .about-col-2 p {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
 }
 
-.sub-title {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  font-family: 'Poppins', sans-serif;
+.about-col-2 > p {
+  margin: 0;
 }
 
+/* #### tab titles with links */
 .tab-titles {
   display: flex;
   margin: 1.25rem 0 1rem;
 }
-
 
 .tab-links {
   margin-right: 50px;
@@ -388,6 +398,7 @@ p.job {
   width: 50%;
 }
 
+/* #### tab details: content according to tittles */
 .tab-details ul {
   padding: 0;
 }
@@ -406,8 +417,65 @@ p.job {
 
 .tab-details {
   display: none;
+  transition: all 0.5s ease;
 }
 
 .tab-details.active-tab {
   display: block;
+  transition: all 0.3s ease;
+}
+
+/* ##### tab-details - id:skills */
+.skill-container {
+  display: flex;
+  width: 60vw;
+  height: 25vh;
+  justify-content: space-between;
+}
+
+.skill-container * {
+  margin: 0;
+  font-family: 'Inclusive Sans', sans-serif;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  max-width: 49%;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  width: 100%;
+  height: 100%;
+  gap: 5%;
+  margin-top: 1rem;
+}
+
+.flex-container > div {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* code below can be deleted after */
+
+#projects, #contact {
+  min-height: 100vh;
+}
+
+#projects {
+  background-color: yellowgreen;
+}
+
+#contact {
+  background-color: brown;
 }
