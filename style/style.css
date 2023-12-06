@@ -12,7 +12,7 @@ body {
 /* # NAVBAR SECTION */
 nav {
   display: flex;
-  padding: 2vw 0;
+  padding: 1.8vw 0;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -31,11 +31,11 @@ nav {
 .nav-links {
   margin: 0px;
   padding: 0px;
-  width: 45vw;
+  width: 35vw;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-style: normal;
 }
 
@@ -49,7 +49,7 @@ nav {
 
 div ul li a.active-nav {
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.8rem;
   text-decoration-color: black;
   transition: all 0.1s ease;
 }
@@ -57,7 +57,7 @@ div ul li a.active-nav {
 .nav-links > li > a:hover {
   color: grey;
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.8rem;
   text-decoration-color: rgb(181, 181, 181);
 }
 
@@ -172,10 +172,23 @@ div li a.active-link {
   border-radius: 50%;
   background-color: rgba(158, 157, 157, 0.858);
   transition: 0.4s ease-out;
+  animation: profile_animation 7s ease-in-out infinite;
+}
+
+@keyframes profile_animation {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }
 
 .profile-picture:hover {
-  background-color: rgb(171, 255, 46);
+  background-color: rgba(190, 190, 190, 0.858);
   transition: 0.4s ease-in;
 }
 
@@ -205,6 +218,11 @@ p.greetings {
   font-weight: bolder;
   color: rgb(100, 100, 100);
   font-size: 1.2rem;
+}
+
+p#job {
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 h1.name {
@@ -321,8 +339,7 @@ p.job {
 /* ------------------------ */
 /* ## about */
 #about {
-  padding: 0 20px;
-  padding-top: 20vh;
+  padding: 14vh 7vw 7vh;
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -338,6 +355,7 @@ p.job {
 .about-col-1 img {
   width: 100%;
   border-radius: 15px;
+  transform: translateY(30px);
 }
 
 /* ### second conatiner */
@@ -348,7 +366,7 @@ p.job {
 /* #### titles: About Me */
 .sub-title {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
   margin: 1rem 0 0;
   font-family: "Poppins", sans-serif;
 }
@@ -423,12 +441,20 @@ p.job {
 
 .tab-details {
   display: none;
-  transition: all 0.5s ease;
 }
 
 .tab-details.active-tab {
   display: block;
-  transition: all 0.3s ease;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* ##### tab-details - id:skills */
@@ -479,18 +505,251 @@ p.job {
   min-height: 100vh;
 }
 
-#projects {
-  background-color: grey;
-}
-
 #contact {
   background-color: white;
 }
 
-#projects,
 #contact {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
+}
+
+/* ## projects */
+#projects {
+  position: relative;
+  padding-top: 14vh;
+}
+
+#projects * {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Projects Title */
+#projects > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 600;
+  margin: 1rem auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 400px;
+}
+
+.slide-details {
+  display: inline-block;
+  top: 0;
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  width: 29%;
+  height: 100%;
+  border: 1px solid black;
+  border-right: transparent;
+  color: black;
+}
+
+.slide-details h2 {
+  margin: 2.1rem 0;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.slide-details p {
+  font-size: 0.9rem;
+}
+
+.slide-buttons,
+.tech-icon {
+  display: flex;
+  gap: 12px;
+}
+
+.slide-buttons {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  gap: 15px;
+}
+
+.slide-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.slide-btn:hover {
+  background-color: rgb(234, 234, 234);
+  transition: all 0.2s linear;
+}
+
+.slide-btn img {
+  height: 25px;
+}
+
+.slide-btn img:hover + span {
+  display: block;
+  animation: slideRight 0.3s linear;
+}
+
+@keyframes slideRight {
+  /* there is still a bug on this animation */
+  from {
+    opacity: 0;
+    /* transform: translateX(-20px); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(0); */
+  }
+}
+
+.slide-btn span {
+  font-size: 0.8rem;
+  margin: 0 0.5rem;
+  display: none;
+}
+
+.tech-icon {
+  position: absolute;
+  bottom: 35px;
+  left: 12px;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.tech-icon > img {
+  height: 25px;
+}
+
+.slide-picture {
+  display: flex;
+  margin-left: 29%;
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: black;
+}
+
+.slide-picture img {
+  height: auto;
+  width: 100%;
+  padding: 0 3%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgba(170, 170, 170, 0.7);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  color: white;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+/* {
+  background-color: rgba(255, 255, 255, 0.8);
+} */
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #696969;
+  mix-blend-mode: difference;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* SCROLLBAR CSS */
+
+* {
+  scrollbar-width: 5px;
+  scrollbar-color: #858585b2 transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+  position: fixed;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #858585b2; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }

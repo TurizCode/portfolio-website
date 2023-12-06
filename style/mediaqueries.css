@@ -19,6 +19,12 @@
 }
 
 @media screen and (max-width: 1025px) {
+  html {
+    font-size: 90%;
+  }
+  main {
+    padding-left: 7px;
+  }
   /* ### first container */
   .about-col-1 {
     flex-basis: 35%;
@@ -46,6 +52,10 @@
   .profile-picture {
     width: 50vw;
   }
+  .btn-container .btn {
+    width: 9rem;
+  }
+  }
   /* ## about */
   #about {
     flex-direction: column;
@@ -64,6 +74,47 @@
   .skill-container {
     width: 85vw;
     height: 20vh;
+  }
+  .mySlides {
+    height: fit-content;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .slide-details {
+    position: static;
+    order: 2;
+    border-right: 1px solid black;
+    width: 100%;
+  }
+  .slide-details * {
+    position: static;
+  }
+  .slide-details br {
+    display: none;
+  }
+  .slide-details h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  .slide-details .tech-icon {
+    margin: 1rem 0;
+    margin-top: 1.2rem;
+  }
+  .slide-picture {
+    position: static;
+    order: 1;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+  }
+  .next,
+  .prev {
+    color: rgb(170, 170, 170);
+  }
+  .numbertext {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.475);
   }
 }
 
