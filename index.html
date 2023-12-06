@@ -6,7 +6,7 @@
     <title>Turiz Code</title>
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="/style/mediaqueries.css" />
-    <link rel="icon" href="./assets/TurizCode-web icon.png" />
+    <link rel="icon" href="./assets/icon/Turiz Code Icon Latest.png" />
   </head>
   <body>
     <!-- # NAVBAR -->
@@ -186,7 +186,10 @@
         </article>
       </section>
       <section id="projects">
-        <h1 class="project-title">My Projects</h1>
+        <div class="title-container">
+          <h1 class="project-title">My Projects</h1>
+        </div>
+
         <!-- Slideshow container -->
         <div class="slideshow-container">
           <!-- Full-width images with number and caption text -->
@@ -229,10 +232,10 @@
             <article class="slide-details">
               <h2 class="sub-title">Coffee Shop Website</h2>
               <p>
-                Minimalis E-commerce website that are created using CSS
-                Framework, Bootstrap, to create a responsice design yet
-                functional with the support of JavaScript. <br />
-                Having all the basic features of an E-commerce website.
+                Minimalis website that are created using CSS Framework,
+                Bootstrap, to create a responsive design yet functional with the
+                support of JavaScript. Having all the basic features of an
+                E-commerce website.
               </p>
               <div class="tech-icon">
                 <img src="./assets/icon/html5.svg" />
@@ -312,7 +315,76 @@
         </div>
       </section>
       <section id="contact">
-        <h1>#CONTACT</h1>
+        <div class="contact-container">
+          <div class="contact-row">
+            <div class="contact-left">
+              <h2 class="title">Contact Me</h2>
+              <p>
+                <img
+                  class="email"
+                  src="./assets/icon/email icon white.png"
+                  alt=""
+                />
+                turizcode@gmail.com
+              </p>
+              <p class="detail-phone">
+                <img class="phone" src="./assets/icon/phone icon.png" alt="" />
+                +6281999982942
+              </p>
+              <div class="social-icon">
+                <img
+                  onclick="window.open('https://www.facebook.com/puturizkii.puturizkii/', '_blank')"
+                  class="fb"
+                  src="./assets/icon/facebook bw.png"
+                  alt=""
+                />
+                <img
+                  onclick="window.open('https://www.instagram.com/puturizkii/', '_blank')"
+                  src="./assets/icon/instagram bw.png"
+                  alt=""
+                />
+                <img
+                  onclick="window.open('https://github.com/turizcode/', '_blank')"
+                  class="github"
+                  src="./assets/icon/github icon square.png"
+                  alt=""
+                />
+                <img
+                  onclick="window.open('https://www.linkedin.com/in/putu-rizki/', '_blank')"
+                  src="./assets/icon/Linkedin icon square.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="contact-right">
+              <form id="contact-form" action="">
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Email Address"
+                  required
+                />
+                <textarea
+                  name="Message"
+                  rows="6"
+                  placeholder="Leave Your Message Here"
+                  style="resize: none"
+                  required
+                ></textarea>
+                <button id="btn-form" class="btn-form" type="submit">
+                  <div></div>
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script defer src="./js/script.js"></script>

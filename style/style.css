@@ -505,35 +505,30 @@ p.job {
   min-height: 100vh;
 }
 
-#contact {
-  background-color: white;
-}
-
-#contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Poppins", sans-serif;
-}
-
 /* ## projects */
 #projects {
   position: relative;
   padding-top: 14vh;
 }
 
-#projects * {
+#projects *,
+#contact * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
+#projects .title-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* Projects Title */
-#projects > h1 {
+#projects > .title-container h1 {
   text-align: center;
   font-size: 2.5rem;
-  line-height: 1;
+  height: fit-content;
+  /* line-height: 1; */
   font-weight: 600;
-  margin: 1rem auto;
 }
 
 /* Slideshow container */
@@ -547,6 +542,8 @@ p.job {
 .mySlides {
   display: none;
   height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px;
 }
 
 .slide-details {
@@ -560,6 +557,7 @@ p.job {
   border: 1px solid black;
   border-right: transparent;
   color: black;
+  border-radius: 20px 0 0 20px;
 }
 
 .slide-details h2 {
@@ -593,11 +591,12 @@ p.job {
   border-radius: 5px;
   border: 1px solid black;
   background-color: white;
+  transition: all 0.5s linear;
 }
 
 .slide-btn:hover {
   background-color: rgb(234, 234, 234);
-  transition: all 0.2s linear;
+  transition: all 0.5s linear;
 }
 
 .slide-btn img {
@@ -606,7 +605,7 @@ p.job {
 
 .slide-btn img:hover + span {
   display: block;
-  animation: slideRight 0.3s linear;
+  animation: slideRight 0.5s linear;
 }
 
 @keyframes slideRight {
@@ -625,6 +624,7 @@ p.job {
   font-size: 0.8rem;
   margin: 0 0.5rem;
   display: none;
+  transition: all 0.5s linear;
 }
 
 .tech-icon {
@@ -642,12 +642,13 @@ p.job {
 .slide-picture {
   display: flex;
   margin-left: 29%;
-  width: 70%;
+  width: 70.9%;
   height: 100%;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
   background-color: black;
+  border-radius: 0 20px 20px 0;
 }
 
 .slide-picture img {
@@ -731,6 +732,138 @@ p.job {
   to {
     opacity: 1;
   }
+}
+
+/* ## Contact */
+#contact {
+  padding-top: 21vh;
+}
+
+#contact img {
+  height: 25px;
+  width: auto;
+}
+
+#contact .email,
+#contact .phone,
+#contact .github {
+  border-radius: 5px;
+  padding: 0.2rem;
+  border: 1.5px solid black;
+  background-color: black;
+}
+
+#contact .contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contact-row {
+  display: flex;
+  width: 90%;
+  padding: 1rem;
+}
+
+#contact .contact-left {
+  flex-basis: 35%;
+}
+#contact .contact-right {
+  flex-basis: 65%;
+}
+.contact-left h2 {
+  margin: 0;
+  font-size: 2.95rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.contact-left p {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  text-align: 1.625rem;
+  padding-left: 2px;
+}
+.contact-left .detail-phone {
+  margin-top: 0;
+}
+.contact-left p img {
+  margin-right: 0.8rem;
+}
+
+.social-icon {
+  padding-left: 2px;
+  margin-top: 2.8rem;
+  display: flex;
+}
+.social-icon img {
+  height: 1.875rem !important;
+  margin-right: 0.9rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.social-icon img:hover {
+  transform: scale(1.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: all 0.3s ease;
+}
+
+.contact-right .btn-form {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1.5px solid black;
+  background-color: transparent;
+  padding: 0.4rem 1rem;
+  padding-left: 0.6rem;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.contact-right .btn-form div {
+  background-image: url(../assets/icon/send\ icon.png);
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-right .btn-form:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.contact-right .btn-form:hover div {
+  background-image: url(../assets/icon/send\ icon\ white.png);
+  transition: all 0.3s ease;
+}
+
+#contact form input:first-child {
+  margin-top: 0;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+  border: 1.5px solid black;
+  border-radius: 4px;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: none;
+  border: 2px solid #696969;
 }
 
 /* SCROLLBAR CSS */

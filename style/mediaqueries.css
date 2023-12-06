@@ -49,6 +49,11 @@
     flex-direction: column;
     gap: 7vw;
   }
+  .hamburger-logo {
+    margin-left: 4vw;
+    height: 2.5rem;
+    width: auto;
+  }
   .profile-picture {
     width: 50vw;
   }
@@ -68,22 +73,39 @@
   #about .about-col-1 {
     display: flex;
     justify-content: center;
+    background-color: rgba(136, 87, 34, 0.4);
+    background-color: white;
+    padding: 1rem 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .about-col-2 {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   /* ##### tab-details - id:skills */
   .skill-container {
     width: 85vw;
     height: 20vh;
   }
+
+  /* PORJECTS */
+  #projects .project-title {
+    margin-bottom: 2rem;
+  }
   .mySlides {
     height: fit-content;
     flex-direction: column;
     padding: 0 2rem;
+    box-shadow: none;
   }
   .slide-details {
     position: static;
     order: 2;
     border-right: 1px solid black;
     width: 100%;
+    border-radius: 0 0 20px 20px;
   }
   .slide-details * {
     position: static;
@@ -106,6 +128,7 @@
     margin: 0;
     width: 100%;
     height: fit-content;
+    border-radius: 20px 20px 0 0;
   }
   .next,
   .prev {
@@ -114,6 +137,13 @@
   .numbertext {
     color: white;
     background-color: rgba(0, 0, 0, 0.475);
+  }
+  #contact .contact-row {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  #contact .social-icon {
+    margin-top: 2rem;
   }
 }
 
@@ -126,6 +156,7 @@
   .about-col-2 p {
     font-size: 1.5rem;
   }
+
   /* #### tab details: content according to tittles */
   .tab-details ul li span {
     color: black;
@@ -146,8 +177,8 @@
     transform: translateY(0);
   }
   .skill-container {
-    width: 90vw;
-    height: 32vh;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -165,8 +196,8 @@
   }
   /* ##### tab-details - id:skills */
   .skill-container {
-    width: 90vw;
-    height: 40vh;
+    width: 100%;
+    height: auto;
   }
   #about img {
     transform: translateY(0);
