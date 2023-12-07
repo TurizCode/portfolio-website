@@ -30,6 +30,7 @@ nav {
 
 .nav-links {
   margin: 0px;
+  margin-right: 2vw;
   padding: 0px;
   width: 35vw;
   display: flex;
@@ -578,8 +579,8 @@ p.job {
 
 .slide-buttons {
   position: absolute;
-  bottom: 12px;
-  left: 10px;
+  bottom: 21px;
+  left: 12px;
   gap: 15px;
 }
 
@@ -846,15 +847,23 @@ p.job {
   transition: all 0.3s ease;
 }
 
+#contact form .field {
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+}
+
 #contact form input:first-child {
   margin-top: 0;
+}
+
+#contact form .field:first-child {
+  padding-top: 0;
 }
 
 #contact form input,
 #contact form textarea {
   width: 100%;
   padding: 0.75rem 1.25rem;
-  margin: 0.5rem 0;
   box-sizing: border-box;
   border: 1.5px solid black;
   border-radius: 4px;
@@ -864,6 +873,20 @@ p.job {
 #contact form textarea:focus {
   outline: none;
   border: 2px solid #696969;
+}
+
+#contact form .field .error-txt {
+  margin-top: -0.12rem;
+  color: red;
+  display: none;
+}
+
+#contact form .error-txt.txt-email {
+  margin-top: -0.1rem;
+}
+
+#contact form .error-txt.txt-message {
+  margin-top: -0.5rem;
 }
 
 /* SCROLLBAR CSS */

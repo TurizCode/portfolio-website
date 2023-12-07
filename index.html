@@ -241,7 +241,10 @@
                 <img src="./assets/icon/html5.svg" />
                 <img src="./assets/icon/css3-alt.svg" />
                 <img src="./assets/icon/js.svg" />
-                <img src="./assets/icon/bootstrap icon.png" />
+                <img
+                  style="height: 23px"
+                  src="./assets/icon/bootstrap icon bw.png"
+                />
               </div>
               <div class="slide-buttons">
                 <button class="slide-btn source">
@@ -318,7 +321,7 @@
         <div class="contact-container">
           <div class="contact-row">
             <div class="contact-left">
-              <h2 class="title">Contact Me</h2>
+              <h2 class="title">Let's Get In Touch</h2>
               <p>
                 <img
                   class="email"
@@ -357,26 +360,43 @@
               </div>
             </div>
             <div class="contact-right">
-              <form id="contact-form" action="">
-                <input
-                  type="text"
-                  name="Name"
-                  placeholder="Your Name"
-                  required
-                />
-                <input
-                  type="email"
-                  name="Email"
-                  placeholder="Email Address"
-                  required
-                />
-                <textarea
-                  name="Message"
-                  rows="6"
-                  placeholder="Leave Your Message Here"
-                  style="resize: none"
-                  required
-                ></textarea>
+              <form id="contact-form">
+                <div class="field">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    autocomplete="off"
+                    required
+                  />
+                  <div class="error-txt">Name cannot be empty!</div>
+                </div>
+                <div class="field">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                    autocomplete="off"
+                    required
+                  />
+                  <div class="error-txt txt-email">Email cannot be empty!</div>
+                </div>
+
+                <div class="field">
+                  <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Leave Your Message Here"
+                    style="resize: none"
+                    required
+                  ></textarea>
+                  <div class="error-txt txt-message">
+                    Message cannot be empty!
+                  </div>
+                </div>
+
                 <button id="btn-form" class="btn-form" type="submit">
                   <div></div>
                   Send
@@ -409,5 +429,8 @@
 
       next();
     </script>
+
+    <!-- Get the Data from Form and send it to Gmail -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>

@@ -100,3 +100,28 @@ input.addEventListener("keypress", function (event) {
     document.getElementById("btn-form").click();
   }
 });
+
+// Sending a Data from Form to Gmail
+const form = document.getElementById("contact-form");
+const userName = document.getElementById("name");
+const userEmail = document.getElementById("email");
+const userMessage = document.getElementById("message");
+
+function sendEmail() {
+  const bodyMessage = `Name: ${userName.value}\nMessage: ${userMessage.value}`;
+
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "turizcode@gmai.com",
+    Password: "2B8405DA72170EFD224B8F2A3D412B72EF73",
+    To: "turizcode@gmail.com",
+    From: userEmail.value,
+    Subject: "Message From your Portfolio",
+    Body: bodyMessage,
+  }).then((message) => alert(message));
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendEmail();
+});

@@ -136,7 +136,6 @@
   }
   .numbertext {
     color: white;
-    background-color: rgba(0, 0, 0, 0.475);
   }
   #contact .contact-row {
     flex-direction: column;
